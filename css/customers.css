@@ -1,5 +1,6 @@
 .customers-page {
   grid-area: customers;
+  height: 101%;
   background-color: #bebad4;
 }
 .customers-page .customers-wrapper {
