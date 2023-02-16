@@ -2,13 +2,16 @@
   background-color: #bebad4;
   grid-area: packages;
   height: 105vh;
+  text-align: left;
+}
+.packages-page .wrapper {
+  padding: 1rem;
 }
 .packages-page h1 {
   font-weight: bold;
   font-size: 2rem;
 }
 .packages-page .packages-container {
-  text-align: left;
   overflow-y: scroll;
 }
 .packages-page .packages-container .packages-lists, .packages-page .packages-container .content-lists .line, .packages-page .content-lists .packages-container .line {
