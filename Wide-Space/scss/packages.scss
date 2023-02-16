@@ -1,0 +1,49 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.packages-page {
+    h1 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    grid-area: packages;
+    @include bg-color-picker(third-color);
+    .packages-container {
+        text-align: left;
+        .packages-lists {
+            list-style: none;
+            width: 100%;
+            @include grid-assign(repeat(4, 70%), repeat(10, 10%));
+            place-items: center;
+            @include padding(0, 0, 0, 0);
+            @include screen-type(pc) {
+                grid-template-columns: repeat(4, 25%);
+            }
+            margin: 0;
+            .packages-lists__items {
+                button {
+                    width: 90%;
+                    @include padding(1rem, 1rem, 1rem, 1rem);
+                    border: 3px solid black;
+                }
+            }
+        }
+        overflow: scroll;
+    }
+    .content-lists {
+        padding: 0;
+        display: grid;
+        place-items: center;
+        .line {
+            @extend .packages-lists;
+            grid-column: span 2;
+            font-size: 0.9rem;
+
+            li {
+                &::before {
+                    border: solid 1px black;
+                }
+            }
+        }
+    }
+}

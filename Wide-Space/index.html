@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wide-space</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/customers.css" />
+  <link rel="stylesheet" href="/css/packages.css" />
+  <link rel="stylesheet" href="/css/hosting.css" />
+  <link rel="stylesheet" href="/css/shared.css" />
+  <script src="https://kit.fontawesome.com/a64937c569.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="mobile-nav hidden">
+      <ul class="mobile-nav__items">
+        <li class="main-nav__item logo">
+          <a href="#main" class="brand">
+            <img src="images/Wide-Space-Logo.jpeg" alt="" />
+          </a>
+        </li>
+        <li class="main-nav__item logo aspects">
+          <a href="#main" class="fa-solid fa-house fa-k"></a>
+        </li>
+        <li class="main-nav__item logo aspects">
+          <a href="#customers" class="fa-solid fa-user-group fa-k"></a>
+        </li>
+        <li class="main-nav__item logo aspects">
+          <a href="#packages" class="fa-solid fa-money-check fa-k"></a>
+        </li>
+        <li class="main-nav__item logo aspects">
+          <a href="#hosting" class="fa-solid fa-wifi fa-k"></a>
+        </li>
+        <li class="main-nav__item logo aspects">
+          <a href="#footer" class="fa-solid fa-question fa-k"></a>
+        </li>
+        <li class="main-nav__item logo">
+          <button class="mobile-toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <nav class="main-nav shrink">
+      <a href="#main" class="brand">
+        <img src="images/Wide-Space-Logo.jpeg" alt="" />
+      </a>
+      <hr />
+      <ul class="main-nav__items">
+        <li class="main-nav__item logo">
+          <a href="#main" class="fa-solid fa-house fa-2xl"></a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#main" class="page">Home</a>
+        </li>
+        <li class="main-nav__item logo">
+          <a href="#customers" class="fa-solid fa-user-group fa-2xl"></a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#customers" class="page">Customers</a>
+        </li>
+        <li class="main-nav__item logo">
+          <a href="#packages" class="fa-solid fa-money-check fa-2xl"></a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#packages" class="page">Packages</a>
+        </li>
+        <li class="main-nav__item logo">
+          <a href="#hosting" class="fa-solid fa-wifi fa-2xl"></a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#hosting" class="page">Start Hosting</a>
+        </li>
+        <li class="main-nav__item logo">
+          <a href="#footer" class="fa-solid fa-question fa-2xl"></a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#footer" class="page">Info</a>
+        </li>
+        <li class="main-nav__item">
+          <button class="main-toggle-button">
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+            <span class="toggle-button__bar"></span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="main" class="main-page ">
+      <section class="display hidden">
+        <div class="container">
+          <p aria-hidden="true">You dream, We build</p>
+        </div>
+      </section>
+      <section class="plans hidden ">
+        <ul class="plan-lists">
+          <li class="economy plan-list__item ">
+            <h1 class="type"><span>P</span>ackage 1</h1>
+            <p>An economical, 25 GB plan with free matching domain, free email and 1 free SSL (with terms of 12/mo. or
+              longer)</p>
+            <p class="price">£3.99/mo</p>
+            <button class="economy-button">Buy Now</button>
+            <ul class="specs">
+              <li><span>Standard</span> Performance</li>
+              <li><span>1</span> website</li>
+              <li><span>25 GB</span> storage</li>
+              <li><span>10</span> database</li>
+              <li><span>Unmetered</span> bandwidth</li>
+              <li>Daily Backups</li>
+              <li><span>Free 1-click</span> WordPress install.</li>
+              <hr>
+              <li><span>2 free Microsoft 365 mailboxes</span> (£46.99/yr value)</li>
+              <li><span>Free domain</span> (£1.01/yr value)</li>
+              <li><span id="certificate">New: Free SSL Certificate</span>(£74.99/yr value) - 1 year</li>
+            </ul>
+          </li>
+          <li class="deluxe plan-list__item ">
+            <h1 class="type"><span>P</span>ackage 2</h1>
+            <p>
+              Multiple site hosting with SSL for all sites. Plus, free matching domain and free email (with terms of
+              12/mo. or longer).
+            </p>
+            <p class="price">£5.99/mo</p>
+            <button class="deluxe-button">Buy Now</button>
+            <ul class="specs">
+              <li><span>Standard</span> Performance</li>
+              <li><span>10</span> website</li>
+              <li><span>50 GB</span> storage</li>
+              <li><span>25</span> database</li>
+              <li><span>Unmetered</span> bandwidth</li>
+              <li>Daily Backups</li>
+              <li><span>Free 1-click</span> WordPress install.</li>
+              <hr>
+              <li><span>3 free Microsoft 365 mailboxes</span> (£71.64/yr value)</li>
+              <li><span>Free domain</span> (£1.01/yr value)</li>
+              <li><span id="certificate">New: Free, unlimited SSL for all websites.</span></li>
+            </ul>
+          </li>
+          <li class="ultimate plan-list__item ">
+            <h1 class="type"><span>P</span>ackage 3</h1>
+            <p>
+              Increased processing power with multiple sites, storage, databases, and SSL for all sites. Plus, free
+              matching domain, and free email (with terms of 12/mo. or longer). </p>
+            <p class="price">£7.99/mo</p>
+            <button class="ultimate-button">Buy Now</button>
+            <ul class="specs">
+              <li><span>Increased</span> Performance</li>
+              <li><span>25</span> website</li>
+              <li><span>75 GB</span> storage</li>
+              <li><span>50</span> database</li>
+              <li><span>Unmetered</span> bandwidth</li>
+              <li>Daily Backups</li>
+              <li><span>Free 1-click</span> WordPress install.</li>
+              <hr>
+              <li><span>5 free Microsoft 365 mailboxes</span> (£119.40/yr value)</li>
+              <li><span>Free domain</span> (£1.01/yr value)</li>
+              <li><span id="certificate">New: Free, unlimited SSL for all websites.</span></li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </section>
+      <section class="features hidden-2 ">
+        <h1 class="features-h1">All Web Hosting plans include:
+        </h1>
+        <ul class="features-lists">
+          <li class="features-lists__item">
+            <h2>New: Free SSL certificate.</h2>
+            <p>Increase visitors' trust by helping to protect personal information, ecommerce transactions and other
+              sensitive data with encrypted connections. Plus, SEO rankings are favorable for sites with an SSL
+              Certificate.</p>
+          </li>
+          <li class="features-lists__item">
+            <h2>Easy-to-use control panel.</h2>
+            <p>Includes industry-standard cPanel to install apps, manage backups and security.</p>
+          </li>
+          <li class="features-lists__item">
+            <h2>1-click domain name setup. 1-click to over 150 free apps.</h2>
+            <p>Link your site to your domain name. Access free apps to create CMS sites (WordPress, Joomla), forums and
+              blogs.</p>
+          </li>
+          <li class="features-lists__item">
+            <h2>24/7 network security.</h2>
+            <p>Get peace of mind, knowing network security and DDoS protection is monitored around the clock.</p>
+          </li>
+          <li class="features-lists__item">
+            <h2>Daily Backups.</h2>
+            <p>Help protect against disasters and mishaps by recovering your entire hosting account from the previous
+              day with automated Daily Backups (paid options to recover up to 30 days).</p>
+          </li>
+          <li class="features-lists__item">
+            <h2>Global data centers.</h2>
+            <p>Get faster page loads and better visitor experience with nearby, state-of-the-art data centers in North
+              America, Europe or Asia-Pacific.</p>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section id="customers" class="customers-page hidden">
+      <div class="customers-wrapper">
+        <div class="customers-container">
+          <div class="customers-image-1">
+          </div>
+          <div class="switch">
+            <button class="fa-solid fa-arrow-left arrow fa-xl"></button>
+            <button class="fa-solid fa-arrow-right arrow fa-xl"></button>
+            <div class="customers-info">
+              <h3>Gilbert Wancook</h3>
+              <p>Founder of
+                <a href="tech-analysis.com">tech-analysis.com</a>
+              </p>
+              <p class="testimonial__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              </p>
+            </div>
+            <div class="customers-info">
+              <h3> Josie Ramsey</h3>
+              <p>Founder of
+                <a href="tech-analysis.com">tech-analysis.com</a>
+              </p>
+              <p class="testimonial__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              </p>
+            </div>
+            <div class="customers-info">
+              <h3>Rachel Burns</h3>
+              <p>Founder of
+                <a href="tech-analysis.com">tech-analysis.com</a>
+              </p>
+              <p class="testimonial__text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+              </p>
+            </div>
+            <div class="customers-info">
+              <h3>Nicole Boyle</h3>
+              <p>Founder of
+                <a href="tech-analysis.com">tech-analysis.com</a>
+              </p>
+              <p class="testimonial__text">
+                Widespace helped me realize my project with a highly constrained
+                budget in like no time.
+              </p>
+            </div>
+          </div>
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+              </div>
+              <div class="slide">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="packages" class="packages-page hidden-2">
+      <h1>Detailed tech specs for Linux web hosting plans:</h1>
+      <div class="packages-container">
+        <ul class="packages-lists">
+          <li class="packages-lists__items">
+          </li>
+          <li class="packages-lists__items">
+            <h1>Economy</h1>
+            <p class="price">£3.99 <span>/mo</span></p>
+            <p id="highlight">With a 3-yr term (50% savings)</p>
+            <p>You pay £143.64 today Renews Feb. 2026 for £7.99/mo (£287.64 total) </p>
+            <button class="economy-button">Buy now</button>
+          </li>
+          <li class="packages-lists__items">
+            <h1>Deluxe</h1>
+            <p class="price">£5.99 <span>/mo</span></p>
+            <p id="highlight">With a 3-yr term (50% savings)</p>
+            <p>You pay £215.64 today Renews Feb. 2026 for £11.99/mo (£431.64 total) </p>
+            <button class="deluxe-button">Buy now</button>
+          </li>
+          <li class="packages-lists__items">
+            <h1>Ultimate</h1>
+            <p class="price">£7.99 <span>/mo</span></p>
+            <p id="highlight">With a 3-yr term (46% savings)</p>
+            <p>You pay £287.64 today Renews Feb. 2026 for £14.99/mo (£539.64 total) </p>
+            <button class="ultimate-button">Buy now</button>
+          </li>
+        </ul>
+        <ul class="content-lists">
+          <div class="line">
+            <li>
+              <p> Free domain with annual plan</p>
+            </li>
+            <li>
+              <p>✓</p>
+            </li>
+            <li>
+              <p>✓</p>
+            </li>
+            <li>
+              <p>✓</p>
+            </li>
+          </div>
+          <div class="line">
+            <li>
+              <p> Websites</p>
+            </li>
+            <li>
+              <p>1</p>
+            </li>
+            <li>
+              <p>10</p>
+            </li>
+            <li>
+              <p>25</p>
+            </li>
+          </div>
+          <div class="line">
+            <li>
+              <p> NVMe SSD Storage</p>
+            </li>
+            <li>
+              <p>25 GB</p>
+            </li>
+            <li>
+              <p>50 GB</p>
+            </li>
+            <li>
+              <p>75 GB</p>
+            </li>
+          </div>
+          <div class="line">
+            <li>
+              <p> Monthly bandwidth</p>
+            </li>
+            <li>
+              <p>Unmetered</p>
+            </li>
+            <li>
+              <p>Unmetered</p>
+            </li>
+            <li>
+              <p>Unmetered</p>
+            </li>
+          </div>
+          <div class="line">
+            <li>
+              <p> Shared CPUs</p>
+            </li>
+            <li>
+              <p>1</p>
+            </li>
+            <li>
+              <p>1</p>
+            </li>
+            <li>
+              <p>2</p>
+            </li>
+          </div>
+          <div class="line">
+            <li>
+              <p> Memory</p>
+            </li>
+            <li>
+              <p>512 MB</p>
+            </li>
+            <li>
+              <p>1 GB</p>
+            </li>
+            <li>
+              <p>1.5 GB</p>
+            </li>
+          </div>
+
+        </ul>
+      </div>
+      </div>
+    </section>
+    <section id="hosting" class="hosting-page hidden">
+      <div class="form-container">
+        <div class="brand">
+          <div class="logo">
+            <img src="/images/Wide-Space-Logo.jpeg" alt="">
+          </div>
+          <div class="title"><span>W</span>ide - <span>S</span>pace</div>
+        </div>
+        <div class="hr">
+          <hr>
+        </div>
+        <form class="form" required>
+          <label for="name" id="info">Your</label>
+          <div>
+            <input type="text">
+            <label for="name" class="name">First Name</label>
+          </div>
+          <div>
+            <input type="text">
+            <label for="name" class="name">Middle Name</label>
+          </div>
+          <div>
+            <input type="text">
+            <label for="name" class="name">Last Name</label>
+          </div>
+          <label for="gender" id="gender-label">Gender</label>
+          <select name="Gender" id="gender">
+            <option value="" selected>Select your Option</option>
+            <option value="01" label="Male"></option>
+            <option value="02" label="Female"></option>
+          </select>
+
+          <label for="email">E-mail</label>
+          <input type="text" name="email" id="email">
+
+          <label for="number">Contact Number</label>
+          <select name="country" id="country">
+            <option value="" selected>Select your Option</option>
+            <option value="01" label="US"></option>
+            <option value="02" label="EN"></option>
+            <option value="03" label="FR"></option>
+            <option value="04" label="TR"></option>
+          </select>
+          <input type="text" name="number" id="number" placeholder="(+90)">
+          <div id="terms">
+            <input type="checkbox" name="terms">
+            <label for="number">Agree to <a href="">Terms & Conditions</a> </label>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section id="footer" class="footer-page hidden-2">
+      <div class="container">
+        <h1>FAQ</h1>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 4</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-brands">
+          <a href="" class="fa-brands fa-facebook fa-xl brand">
+            <i class="fa-solid fa-xs fa-rotate-90"></i>
+          </a>
+          <a href="" class="fa-brands fa-whatsapp fa-2xl brand">
+            <i class="fa-solid fa-xs fa-rotate-90"></i></a>
+          <a href="" class="fa-brands fa-twitter fa-2xl brand">
+            <i class="fa-solid fa-xs fa-rotate-90"></i></a>
+          <a href="" class="fa-brands fa-linkedin fa-2xl brand">
+            <i class="fa-solid fa-xs fa-rotate-90"></i></a>
+          <a href="" class="fa-brands fa-instagram fa-2xl brand">
+            <i class="fa-solid fa-xs fa-rotate-90"></i></a>
+          <a href="" class="fa-brands fa-youtube fa-2xl brand"></a>
+        </div>
+        <div class="information">
+          <a href="">Contact Us</a>
+          <a href="" class="company-name">Wide-Space</a>
+          <a href="">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+          <i>Copyright ©️ 2023 Wide-Space, Crehera</i>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+</body>

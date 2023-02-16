@@ -1,0 +1,164 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.main-page {
+    grid-area: main;
+    display: grid;
+    @include screen-type(pc) {
+        grid-template-rows: 100vh 120vh 1fr;
+    }
+    @include screen-type(phone-landscape) {
+        grid-template-rows: 100vh 225vh 225vh;
+    }
+    grid-template-rows: 100vh 310vh 1fr;
+    grid-template-areas: "display-pic" "plans" "features";
+    .display {
+        grid-area: display-pic;
+        background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent) 10%, url("/images/freedom.jpg") center/cover no-repeat border-box fixed, #0e4f1f;
+        background-position: 25%;
+        z-index: 0;
+        @include screen-type(phone-landscape) {
+            background-position: 10% 10%;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 90%;
+            grid-template-rows: 100%;
+            justify-items: end;
+            align-items: end;
+            height: 100vh;
+            p {
+                @include screen-type(pc) {
+                    font-size: 3rem;
+                }
+                font-size: 2rem;
+                color: map-get($map: $colors, $key:fifth-color);
+            }
+        }
+    }
+    .plans {
+        grid-area: plans;
+        height: 100%;
+        color: map-get($map: $colors, $key: black-color);
+        .plan-lists {
+            list-style: none;
+            display: grid;
+            grid-gap: 1rem;
+            @include padding(0, 1rem, 0, 1rem);
+            .type {
+                span {
+                    color: map-get($map: $colors, $key: secondary-color);
+                }
+            }
+            .specs {
+                list-style: none;
+
+                padding: 0;
+                span {
+                    color: map-get($map: $colors, $key: secondary-color);
+                }
+                li {
+                    @include padding(0.5rem, 0.5rem, 0, 0.5rem);
+                    &:before {
+                        content: "✓";
+                    }
+                }
+                #certificate {
+                    @include bg-color-picker(yellow-color);
+                }
+            }
+            @include screen-type(pc) {
+                height: 100%;
+                @include grid-assign(repeat(3, 33%), 100%);
+                grid-gap: 0.5rem;
+                justify-items: center;
+                align-items: center;
+                margin: 0;
+            }
+            @include screen-type(phone-landscape) {
+                height: 100%;
+                @include padding(1rem, 1rem, 1rem, 1rem);
+
+                justify-items: start;
+                align-items: start;
+            }
+        }
+        .plan-list__item {
+            // if text is bigger then the template text adjust the percentage.
+            @include grid-assign(fit-content,15% 15% 13% 10% 15%);
+            width: 100%;
+            height: 100vh;
+            @include screen-type(pc) {
+                height: 100%;
+                width: 100%;
+            }
+            @include screen-type(phone-landscape) {
+                height: 100%;
+            }
+        }
+        button {
+            @include margin(0, 0, 1rem, 0);
+            @include padding(1rem, 0, 1rem, 0);
+        }
+        .economy {
+            @include bg-color-picker(plans-1);
+            text-align: left;
+            @include padding(1rem, 1rem, 0, 1rem);
+            .price {
+                font: 2.5rem bold;
+            }
+            .economy-button {
+                width: 100%;
+                @include padding(1rem, 1rem, 1rem, 1rem);
+                border: 3px solid black;
+            }
+        }
+        .deluxe {
+            @extend .economy;
+            @include bg-color-picker(plans-2);
+            .deluxe-button {
+                @extend .economy-button;
+            }
+        }
+        .ultimate {
+            @extend .economy;
+            .ultimate-button {
+                @extend .economy-button;
+            }
+        }
+    }
+    .features {
+        @include margin(2rem, 0, 0, 0);
+
+        .features-h1 {
+            color: map-get($map: $colors, $key: secondary-color);
+        }
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        grid-area: features;
+        .features-lists {
+            @include screen-type(pc) {
+                grid-template-columns: repeat(2, 50%);
+                height: 80%;
+            }
+            list-style: none;
+            display: grid;
+            text-align: left;
+            grid-gap: 0.5rem;
+            @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+            @include margin(1rem, 1rem, 1rem, 1rem);
+            .features-lists__item {
+                @include padding(0.25rem, 0.25rem, 0.25rem, 0.25rem);
+
+                @include bg-color-picker(plans-2);
+                color: map-get($map: $colors, $key: black-color);
+
+                h2 {
+                    color: map-get($map: $colors, $key: secondary-color);
+                    font-size: 1rem;
+                }
+            }
+        }
+        background: linear-gradient(to top, #bebad4, white, transparent);
+    }
+}
