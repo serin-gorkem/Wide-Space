@@ -324,7 +324,7 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 570vh 100vh 100vh 105vh 100vh;
+  grid-template-rows: 570vh 100vh 100vh 100vh 100vh;
   grid-template-areas: "main" "customers" "packages" "hosting" "footer";
 }
 @media (min-width: 40rem) {
