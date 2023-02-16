@@ -1,0 +1,56 @@
+.packages-page {
+  background-color: #bebad4;
+  grid-area: packages;
+  height: 105vh;
+}
+.packages-page h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.packages-page .packages-container {
+  text-align: left;
+  overflow-y: scroll;
+}
+.packages-page .packages-container .packages-lists, .packages-page .packages-container .content-lists .line, .packages-page .content-lists .packages-container .line {
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 70%);
+  grid-template-rows: repeat(5, 20%);
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin: 0;
+}
+@media (min-width: 40rem) {
+  .packages-page .packages-container .packages-lists, .packages-page .packages-container .content-lists .line, .packages-page .content-lists .packages-container .line {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+.packages-page .packages-container .packages-lists .packages-lists__items button, .packages-page .packages-container .content-lists .line .packages-lists__items button, .packages-page .content-lists .packages-container .line .packages-lists__items button {
+  width: 90%;
+  height: 100%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  border: 3px solid black;
+}
+@media (min-width: 40rem) {
+  .packages-page .packages-container {
+    overflow: hidden;
+  }
+}
+.packages-page .content-lists {
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+.packages-page .content-lists .line {
+  grid-column: span 2;
+  font-size: 0.9rem;
+}
+.packages-page .content-lists .line li::before {
+  border: solid 1px black;
+}/*# sourceMappingURL=packages.css.map */

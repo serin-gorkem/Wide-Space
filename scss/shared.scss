@@ -1,0 +1,408 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@400&display=swap");
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 2rem;
+}
+body {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include bg-color-picker(white-color);
+}
+.mobile-nav {
+    @include screen-type(pc) {
+        display: none;
+    }
+    @include screen-type(phone-landscape) {
+        display: block;
+    }
+
+    display: block;
+    color: map-get($map: $colors, $key: white-color);
+    position: fixed;
+
+    @include bg-color-picker(third-color);
+    padding: 0.5rem;
+    z-index: 10;
+
+    width: 100%;
+    .brand {
+        img {
+            max-width: 100%;
+            max-height: 6vh;
+            margin-right: 0.5rem;
+        }
+        p {
+            display: none;
+        }
+    }
+    .mobile-nav__items {
+        @include flex-assign(row, space-between);
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        align-self: center;
+        &:active {
+            &:not(:first-child, :last-child) {
+                @include padding(0.3rem, 0.3rem, 0.3rem, 0.3rem);
+            }
+        }
+
+        .bar {
+            width: 100%;
+            height: 100%;
+            background-color: map-get($map: $colors, $key: third-color);
+        }
+    }
+    hr {
+        display: none;
+    }
+    .mobile-toggle-button {
+        @include flex-assign(column, center);
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid map-get($map: $colors, $key: black-color);
+        .toggle-button__bar {
+            width: 70%;
+            height: 0.2rem;
+            border: 1px solid map-get($map: $colors, $key: black-color);
+            border-radius: 5px;
+            @include bg-color-picker(black-color);
+            display: block;
+            margin: 0.2rem;
+        }
+    }
+}
+
+.main-nav {
+    color: map-get($map: $colors, $key: white-color);
+    position: fixed;
+
+    @include bg-color-picker(third-color);
+    padding: 0.5rem;
+    z-index: 10;
+    width: 10%;
+    height: 100vh;
+    @include flex-assign(column, flex-start);
+    align-items: center;
+
+    .page {
+        animation: disappear 100ms ease-in-out;
+        display: none;
+    }
+
+    .brand {
+        width: 100%;
+        img {
+            max-width: 100%;
+            max-height: 10vh;
+            margin-right: 0.5rem;
+        }
+        p {
+            display: block;
+            font-size: 1rem;
+            span {
+                font-size: 3rem;
+                color: map-get($map: $colors, $key: secondary-color);
+            }
+        }
+        hr {
+            display: block;
+            width: 100%;
+        }
+    }
+    .main-nav__items {
+        @include grid-assign(100%,fit-content);
+        justify-items: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        list-style: none;
+        .main-nav__item {
+            a {
+                color: map-get($map: $colors, $key:fifth-color);
+                &:hover,:active {
+                    padding: 1rem;
+                    border: 2px solid map-get($map: $colors, $key:highlight-color);
+                    @include bg-color-picker(highlight-color);
+                    transition: all 0.5s;
+                }
+            }
+            margin-top: 4rem;
+            &:last-child {
+                grid-column: span 2;
+            }
+        }
+    }
+    .logo {
+        a {
+            text-decoration: none;
+            color: map-get($map: $colors, $key:icon) !important;
+        }
+        align-self: center;
+    }
+    hr {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .main-toggle-button {
+        @include flex-assign(column, center);
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid map-get($map: $colors, $key: black-color);
+        .toggle-button__bar {
+            width: 80%;
+            height: 0.2rem;
+            border: 1px solid map-get($map: $colors, $key: black-color);
+            border-radius: 5px;
+            @include bg-color-picker(black-color);
+            display: block;
+            margin: 0.2rem;
+            &:first-of-type {
+                width: 50%;
+                margin-left: 0;
+            }
+            &:last-of-type {
+                width: 40%;
+                margin-left: 0;
+            }
+        }
+        &:hover,:active {
+            .toggle-button__bar {
+                &:first-of-type {
+                    width: 80%;
+                    margin: 0.2rem;
+
+                    transition: all 400ms;
+                }
+                &:last-of-type {
+                    width: 80%;
+                    margin: 0.2rem;
+
+                    transition: all 400ms;
+                }
+            }
+        }
+    }
+    @include screen-type(pc) {
+        display: block;
+
+    }
+    @include screen-type(phone-landscape) {
+        display: none;
+    }
+
+    display: none;
+}
+
+// #region Animations
+
+.shrink {
+    transition: width 800ms ease-out;
+    width: 10%;
+    .page {
+        animation: disappear 100ms ease-in-out;
+        display: none;
+    }
+    .brand {
+        flex-direction: column;
+    }
+    .main-nav__items {
+        grid-template-columns: 100%;
+    }
+}
+.expand {
+    transition: width 800ms ease-out;
+    width: 20%;
+    .page {
+        display: block;
+    }
+    .brand {
+        flex-direction: row;
+    }
+    .main-nav__items {
+        grid-template-columns: 20% 1fr;
+        .main-nav__item {
+            margin-top: 5rem;
+        }
+    }
+}
+.hide {
+    animation: disappear 500ms forwards;
+}
+.appear {
+    animation: appear 500ms forwards;
+}
+.rotate-360 {
+    animation: rotate-360 500ms forwards;
+}
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes from-L {
+    0% {
+        right: 100px;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes from-R {
+    0% {
+        left: 100px;
+    }
+    100% {
+        left: 0;
+    }
+}
+.hidden {
+    opacity: 0;
+    transition: all 1.5s;
+}
+.hidden-2 {
+    opacity: 0;
+    transition: all 2.5s;
+}
+.show {
+    opacity: 1;
+}
+// #endregion
+
+main {
+    display: grid;
+    @include screen-type(pc) {
+        grid-template-columns: 10% 1fr;
+        grid-template-rows: 340vh 100vh 105vh 105vh 100vh;
+        grid-template-areas: "nav main" "nav customers" "nav packages" "nav hosting" "nav footer";
+    }
+
+    @include screen-type(phone-landscape) {
+        grid-template-columns: 100%;
+        grid-template-rows: 550vh repeat(2, 180vh) 200vh 100vh;
+
+        grid-template-areas: "main" "customers" "packages" "hosting" "footer";
+    }
+    grid-template-rows: 570vh 100vh 100vh 105vh 100vh;
+    grid-template-areas: "main" "customers" "packages" "hosting" "footer";
+
+    .footer-page {
+        background: linear-gradient(to bottom, #bebad4, white, transparent);
+        grid-area: footer;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .container {
+            height: 80vh;
+            @include screen-type(pc) {
+                display: grid;
+                height: 100%;
+                @include padding(1rem, 5rem, 1rem, 5rem);
+            }
+            @include padding(1rem, 1rem, 1rem, 1rem);
+            .accordion {
+                @include bg-color-picker(highlight-color);
+                cursor: pointer;
+                @include padding(18px, 18px, 18px, 18px);
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+                .active,
+                .accordion:hover {
+                    background-color: #ccc;
+                }
+            }
+            .panel {
+                @include padding(0, 18px, 0, 18px);
+                display: none;
+                background-color: white;
+                overflow: hidden;
+            }
+        }
+        .footer-container {
+            @include screen-type(pc) {
+                @include padding(1rem, 10rem, 1rem, 10rem);
+            }
+            @include screen-type(phone-landscape) {
+                height: fit-content;
+            }
+            background: black;
+            color: white;
+            height: 20vh;
+            @include flex-assign(column,space-between);
+            @include padding(0.5rem, 0.5rem, 0.5rem, 0.5rem);
+
+            .footer-brands {
+                @include padding(2rem, 0,2rem, 0);
+                @include flex-assign(row,center);
+                width: 100%;
+                .brand {
+                    @include padding(0, 0.5rem, 0, 0.5rem);
+                }
+
+            }
+            .copyright {
+                color: grey;
+                font-size: 0.7rem;
+            }
+            .information {
+
+                font-size: 0.8rem;
+                .company-name {
+                    font-size: 1.4rem;
+                }
+                @include flex-assign(row,space-between);
+                width: 100%;
+            }
+        }
+    }
+}

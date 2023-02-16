@@ -1,0 +1,129 @@
+.hosting-page {
+  grid-area: hosting;
+  background-color: #bebad4;
+}
+.hosting-page .form-container {
+  display: grid;
+  grid-template-columns: fit-content;
+  grid-template-rows: 19vh 1vh 80vh;
+  grid-template-areas: "brand" "hr" "form";
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+@media (orientation: landscape) and (max-height: 40rem) {
+  .hosting-page .form-container {
+    height: 100%;
+    grid-template-rows: 39vh 1fr 150vh;
+  }
+}
+.hosting-page .form-container .brand {
+  width: 100%;
+  grid-area: brand;
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media (min-width: 40rem) {
+  .hosting-page .form-container .brand {
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
+.hosting-page .form-container .brand .logo {
+  width: 50%;
+}
+.hosting-page .form-container .brand .logo img {
+  width: 100%;
+  height: 100%;
+}
+.hosting-page .form-container .brand .title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  width: 100%;
+}
+.hosting-page .form-container .brand .title span {
+  color: #6e6987;
+}
+.hosting-page .form-container .hr {
+  width: 100%;
+}
+.hosting-page .form-container .hr hr {
+  width: 100%;
+}
+.hosting-page .form-container .form {
+  border: solid 2px black;
+  box-shadow: 10px 10px 20px -5px rgb(0, 0, 0);
+  max-width: 90%;
+  font-family: "Open Sans", sans-serif;
+  grid-area: form;
+  height: 80%;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(9, 10%);
+  justify-items: center;
+  align-items: center;
+}
+@media (min-width: 40rem) {
+  .hosting-page .form-container .form {
+    width: 40%;
+  }
+}
+@media (orientation: landscape) and (max-height: 40rem) {
+  .hosting-page .form-container .form {
+    height: 100%;
+    grid-template-rows: repeat(9, 10%);
+  }
+}
+.hosting-page .form-container .form #info {
+  grid-column: span 3;
+  justify-self: flex-start;
+}
+.hosting-page .form-container .form .name {
+  font-size: 0.8rem;
+}
+.hosting-page .form-container .form label {
+  grid-column: span 3;
+  justify-self: flex-start;
+}
+.hosting-page .form-container .form label:first-child {
+  font-size: 1.5rem;
+}
+.hosting-page .form-container .form input {
+  grid-column: span 2;
+  border: solid 2px gray;
+  border-radius: 4px;
+  height: 35%;
+  width: 95%;
+}
+@media (min-width: 40rem) {
+  .hosting-page .form-container .form input {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.hosting-page .form-container .form select {
+  grid-column: span 3;
+  width: 100%;
+}
+.hosting-page .form-container .form #number {
+  grid-column: span 2;
+}
+.hosting-page .form-container .form #terms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  grid-column: span 1;
+  font-size: 0.8rem;
+  text-align: left;
+}/*# sourceMappingURL=hosting.css.map */
