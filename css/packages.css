@@ -33,7 +33,7 @@
 }
 .packages-page .packages-container .packages-lists .packages-lists__items button, .packages-page .packages-container .content-lists .line .packages-lists__items button, .packages-page .content-lists .packages-container .line .packages-lists__items button {
   width: 90%;
-  height: 20%;
+  height: 6vh;
   padding-top: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
