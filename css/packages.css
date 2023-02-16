@@ -1,11 +1,17 @@
 .packages-page {
   background-color: #bebad4;
   grid-area: packages;
-  height: 105vh;
+  height: 101%;
   text-align: left;
+}
+@media (min-width: 40rem) {
+  .packages-page {
+    height: 100%;
+  }
 }
 .packages-page .wrapper {
   padding: 1rem;
+  width: 100%;
 }
 .packages-page h1 {
   font-weight: bold;
@@ -19,7 +25,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 70%);
-  grid-template-rows: repeat(5, 20%);
+  grid-template-rows: fit-content;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
