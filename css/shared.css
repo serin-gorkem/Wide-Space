@@ -338,7 +338,7 @@ main {
 @media (orientation: landscape) and (max-height: 40rem) {
   main {
     grid-template-columns: 100%;
-    grid-template-rows: 550vh repeat(2, 180vh) 200vh 100vh;
+    grid-template-rows: 550vh repeat(2, 250vh) 200vh 100vh;
     grid-template-areas: "main" "customers" "packages" "hosting" "footer";
   }
 }
